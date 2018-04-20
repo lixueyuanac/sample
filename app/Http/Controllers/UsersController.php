@@ -9,6 +9,7 @@ class UsersController extends Controller
 {
     //
     public function create(){
+        dd(get_db_config());
         return view('users.create');
     }
 
