@@ -8436,8 +8436,6 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
-  /* sidebar */
-  /* forms */
 }
 
 footer a {
@@ -8472,60 +8470,96 @@ footer .slogon {
   font-weight: bold;
 }
 
-footer aside section {
+/* sidebar */
+
+aside section {
   padding: 10px 0;
   margin-top: 20px;
 }
 
-footer aside section:first-child {
+aside section:first-child {
   border: 0;
   padding-top: 0;
 }
 
-footer aside section span {
+aside section span {
   display: block;
   margin-bottom: 3px;
   line-height: 1;
 }
 
-footer section.user_info {
+section.user_info {
   padding-bottom: 10px;
   margin-top: 20px;
   text-align: center;
 }
 
-footer section.user_info .gravatar {
+section.user_info .gravatar {
   float: none;
   max-width: 70px;
 }
 
-footer section.user_info h1 {
+section.user_info h1 {
   font-size: 1.4em;
   letter-spacing: -1px;
   margin-bottom: 3px;
   margin-top: 15px;
 }
 
-footer .gravatar {
+.gravatar {
   float: left;
   margin-right: 10px;
   max-width: 50px;
   border-radius: 50%;
 }
 
-footer input,
-footer textarea,
-footer select,
-footer .uneditable-input {
+/* forms */
+
+input,
+textarea,
+select,
+.uneditable-input {
   border: 1px solid #bbb;
   margin-bottom: 15px;
 }
 
-footer input {
+input {
   height: auto !important;
 }
 
-footer .panel {
+.panel {
   margin-top: 50px;
+}
+
+/* Users edit */
+
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.gravatar_edit .gravatar {
+  float: none;
+  max-width: 100px;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.users li {
+  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.delete-btn {
+  float: right;
+  position: relative;
+  right: 0;
 }
 
