@@ -27,9 +27,12 @@ class UsersController extends Controller
     }
 
     public function show(User $user){
-        session()->put('success', '欢迎，您将在这里开启一段新的旅程~');
+        //session()->put('success', '欢迎，您将在这里开启一段新的旅程~');
         //dump($user->name);exit;
-        return view('users.show',compact('user'));
+        $statuses = $user->statuses()
+                           ->orderBy('created_at', 'desc')
+                           ->paginate(30);
+        return view('users.show', compact('user', 'statuses'));
     }
     //用户注册
     public function store(Request $request){
