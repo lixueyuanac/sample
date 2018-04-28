@@ -97,10 +97,25 @@ class UsersController extends Controller
         session()->flash('info', '个人资料更新成功');
         return redirect()->route('users.show',$user->id);
     }
-
+    //删除指定用户
     public function destroy(User $user){
         $user->delete();
         session()->flash('success','成功删除指定用户');
         return back();
     }
+    //我关注的
+    public function followings(User $user)
+    {
+        $users = $user->followings()->paginate(30);
+        $title = '关注的人';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+    //关注我的
+    public function followers(User $user)
+    {
+        $users = $user->followers()->paginate(30);
+        $title = '粉丝';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+
 }
